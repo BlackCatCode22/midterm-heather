@@ -72,6 +72,13 @@ print("The sender dictionary, sorted by kv pairs:")
 for key, value in sorted(senders.items()):
     print(key, value)
 
+# I'm not exactly sure what you were asking for here, so I'm just gonna write my best understanding of the distinction. Dictionaries
+# are not indexed by position, they're indexed by keys. Once the key has been created, its paired value can be adjusted. The get() 
+# method accesses the dictionary the same way an index acesses a list, looking for the specified key and retrieving the paired value.
+# If we use the item() method though, the dictionary can get transformed into a tuple which is indexed like a list but is hard set- 
+# there's no appending additional elements or editing values. I'm guessing the immutability is nice when you need to share a dictionary
+# while still maintaining a source of truth. Hope that's what you meant.
+
 print("Tuples in a dictionary:")
 print("Key-value pairs are:")
 for key, value in senders.items():
